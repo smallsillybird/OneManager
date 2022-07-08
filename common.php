@@ -1153,19 +1153,56 @@ function adminform($name = '', $pass = '', $storage = '', $path = '')
     }
     $statusCode = 401;
     $html .= '
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/186526/renexmoe-cdn@v1.3/css/app.css"><meta name="theme-color" content="#fff" />
+
 <body>
-    <div>
-    <center><h4>' . getconstStr('InputPassword') . '</h4>
-    ' . $name . '
-    <form action="" method="post" onsubmit="return sha1loginpass(this);">
-        <div>
-            <input id="password1" name="password1" type="password"/>
-            <input name="timestamp" type="hidden"/>
-            <input type="submit" value="' . getconstStr('Login') . '">
-        </div>
-    </form>
-    </center>
+
+    <div class="mdui-col-md-6 mdui-col-offset-md-3">
+
+  <br />
+
+  <center>
+
+    <div class="mdui-typo-title">
+
+      ' . getconstStr('InputPassword') . '
+
+      ' . $name . '
+
     </div>
+
+  </center>
+
+  <form action="" method="post" onsubmit="return sha1loginpass(this);">
+
+    <div class="mdui-textfield mdui-textfield-floating-label">
+
+      <i class="mdui-icon material-icons">https</i
+
+      ><label class="mdui-textfield-label"></label
+
+      ><input id="password1" name="password1" class="mdui-textfield-input" type="password" />
+
+    </div>
+
+    <br />
+
+    <input name="timestamp" type="hidden"/>
+
+    <button
+
+      class="mdui-center mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme"
+
+    >
+
+      <i class="mdui-icon material-icons">fingerprint</i>&nbsp;&nbsp;登录
+
+  </button>
+
+  </form>
+
+</div>
+
 </body>';
     $html .= '
 <script>
